@@ -1,29 +1,53 @@
 import React, { Component } from 'react';
-import { Button, StyleSheet, View } from 'react-native';
+import { Text, Button, StyleSheet, View, TouchableHighlight } from 'react-native';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 
 export default class ButtonBasics extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            likes: this.props.likes,
+            color: 'white'
+        }
+    }
+    
     _onPressButton() {
         alert('Please Select a Date')
     }
-    _onPress () {
-        alert('Wishlist Modified')
+    _onPressLikes () {
+        this.setState({ likes: (this.state.likes === 0) ? 1 : 0 });
+        this.setState({ color: (this.state.color === 'white') ? '#ff6347' : 'white'})
     }
     
     render() {
         return (
         <View style={styles.container}>
             <View style={styles.LayoutButtonContainer}>
-            <Button
-                onPress={this._onPressButton}
-                title={this.props.name}
-                color="white"
+                <Button
+                    onPress={this._onPressButton}
+                    title={this.props.name}
+                    color="white"
+                    
+                />
+                <View style={{flexDirection: 'row'}}>
+                    <View style={{alignSelf: 'center'}}>
+                        <Text style={{color: "#ff6347", marginRight: 20}}>{this.state.likes}</Text>
+                    </View>
+                    <TouchableHighlight
+                        style={styles.heart}
+                        onPress={() => this._onPressLikes()}
+                    >
+                        <FontAwesomeIcon
+                            icon={ faHeart }
+                            size={30}
+                            color={ this.state.color }
+                        >
+                        </FontAwesomeIcon>
+                    </TouchableHighlight>
+                </View>
                 
-            />
-            <Button
-                onPress={this._onPress}
-                title={this.props.likes + "♡"}
-                color="#ff6347"
-            />
+            
             </View>
         </View>
         );
@@ -48,5 +72,9 @@ const styles = StyleSheet.create({
     paddingRight: 35,
     paddingLeft: 35,
     borderRadius: 20,
-}
+  },
+  heart: {
+    alignSelf: 'center'
+  }
+
 });

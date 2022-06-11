@@ -23,9 +23,9 @@ const styles = StyleSheet.create({
   sectionHeader: {
     paddingTop: 5,
     paddingLeft: 10,
-    paddingRight: 280,
+    paddingRight: 270,
     paddingBottom: 5,
-    fontSize: 20,
+    fontSize: 19,
     fontWeight: 'bold',
     backgroundColor: '#deb887',
   },
