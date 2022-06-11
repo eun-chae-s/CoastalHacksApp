@@ -2,6 +2,7 @@
 // https://aboutreact.com/react-native-login-and-signup/
 
 import { NavigationHelpersContext } from '@react-navigation/native';
+import dummy_data from '../dummydata';
 import React, { useState, createRef } from 'react';
 import {
     StyleSheet,
@@ -11,7 +12,6 @@ import {
     Image,
     KeyboardAvoidingView,
     TouchableOpacity,
-    ScrollView,
 } from 'react-native';
 
 const Register = ({ navigation }) => {
@@ -46,52 +46,27 @@ const Register = ({ navigation }) => {
         }
         if (userPassword != confirmPassword){
             alert('Passwords do not match')
+            setErrortext('Passwords do not match');
+            return;
         }
         if (!userEmail) {
             alert('Incomplete fields');
             setErrortext('Email is Required');
             return;
         }
+        const emailList = []
+        for (const user of dummy_data){
+            emailList.push(user['email'])
+        }
+        if (emailList.includes(userEmail)) {
+            alert('User already exists');
+            setErrortext('Email already registered');
+            return;
+        }
         alert('Thank you for registering! You will receive an email when your certificate is approved.')
         navigation.navigate('Home')
         
     }
-        // var formBody = [];
-        // for (var key in dataToSend) {
-        //     formBody.push(encodedKey + '=' + encodedValue);
-        // }
-        // formBody = formBody.join('&');
-
-        // fetch('http://localhost:3000/api/user/register', {
-        //     method: 'POST',
-        //     body: formBody,
-        //     headers: {
-        //         //Header Defination
-        //         'Content-Type':
-        //             'application/x-www-form-urlencoded;charset=UTF-8',
-        //     },
-        // })
-    //         .then((response) => response.json())
-    //         .then((responseJson) => {
-    //             console.log(responseJson);
-    //             // If server response message same as Data Matched
-    //             if (responseJson.status === 'success') {
-    //                 setIsRegistraionSuccess(true);
-    //                 console.log(
-    //                     'Registration Successful. Please Login to proceed'
-    //                 );
-    //             } else {
-    //                 setErrortext(responseJson.msg);
-    //             }
-    //         })
-    //         .catch((error) => {
-    //             console.error(error);
-    //         });
-    // };
-    // if (isRegistraionSuccess) {
-    //     alert('Thank you for registering')
-    //     navigation.navigate('')
-    // }
     return (
         <View style={{ flex: 1, backgroundColor: '#Deb887' }}>
            
@@ -253,7 +228,7 @@ const styles = StyleSheet.create({
     },
     inputStyle: {
         flex: 1,
-        color: '#fff8dc',
+        color: 'black',
         paddingLeft: 15,
         paddingRight: 15,
         borderWidth: 1,
