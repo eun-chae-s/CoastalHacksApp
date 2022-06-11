@@ -5,11 +5,15 @@ import { Alert } from 'react-native'
 const Home = ({ navigation }) => {
 
     const visitorPressed = () => {
-        Alert.alert("student?")
+        navigation.navigate('NewsL')
     }
 
     const staffPressed = () => {
-        Alert.alert("Welcome Mario!")
+        navigation.navigate('Login')
+    }
+
+    const applyPressed = () => {
+        navigation.navigate('Register')
     }
 
     return (
@@ -31,7 +35,7 @@ const Home = ({ navigation }) => {
                         <TouchableOpacity onPress={staffPressed} style={styles.staffButtons}>
                             <Text style={styles.staff}>Staff Login</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity onPress={staffPressed} style={styles.staffButtons}>
+                        <TouchableOpacity onPress={applyPressed} style={styles.staffButtons}>
                             <Text style={styles.staff}>Apply</Text>
                         </TouchableOpacity>
                     </View>
