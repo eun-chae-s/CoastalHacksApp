@@ -4,10 +4,10 @@ import Home from "./components/Home";
 
 const Stack = createNativeStackNavigator();
 
-MyNavigator = () => {
+const MyNavigator = () => {
     return (
         <Stack.Navigator>
-          <Stack.Screen name="Home" component={Home} />
+          <Stack.Screen name="Home" component={Home} options={{headerShown: false}} />
         </Stack.Navigator>
       );
 }
