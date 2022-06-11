@@ -21,7 +21,9 @@ const styles = StyleSheet.create({
         width: 350,
         margin: 10,
         padding: 20,
-        alignItems: 'flex-start'
+        alignItems: 'flex-start',
+        backgroundColor: 'white',
+        borderColor: '#deb887'
     },
     header: {
         display: 'flex',
@@ -32,6 +34,7 @@ const styles = StyleSheet.create({
     line: {
         borderBottomWidth: 1,
         borderBottomColor: 'black',
+        borderBottomColor: '#deb887',
         width: 320,
         margin: 10,
         alignSelf: 'center'

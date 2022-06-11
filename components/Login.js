@@ -30,7 +30,7 @@ const Login = ({navigation}) => {
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: '#FFE9E4',
+        backgroundColor: '#FFf8dc',
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center'
@@ -38,10 +38,11 @@ const styles = StyleSheet.create({
     header: {
         fontSize: 70,
         fontWeight: "bold",
+        color: '#deb887'
     },
     textinput_nickname: {
         fontSize: 18,
-        borderColor: 'black',
+        borderColor: '#deb887',
         borderWidth: 1,
         width: 150,
         padding: 5,
@@ -51,16 +52,16 @@ const styles = StyleSheet.create({
     },
     textinput_pw: {
         fontSize: 18,
-        borderColor: 'black',
+        borderColor: '#deb887',
         borderWidth: 1,
         width: 150,
         padding: 5,
         borderRadius: 5,
     },
     button: {
-        backgroundColor: 'black',
+        backgroundColor: '#deb887',
         width: 150,
-        borderColor: 'black',
+        borderColor: '#deb887',
         borderWidth: 3,
         borderRadius: 10,
         marginTop: 20,

@@ -40,6 +40,7 @@ const ChatV = ({ navigation }) => {
                 <FontAwesomeIcon
                     icon={ faWater }
                     size={50}
+                    color={'white'}
                 ></FontAwesomeIcon>
             </TouchableHighlight>
             <TouchableHighlight
@@ -59,7 +60,7 @@ const ChatV = ({ navigation }) => {
                 <FontAwesomeIcon
                     icon={ faHome }
                     size={50}
-                    color='black'
+                    color={'white'}
                 ></FontAwesomeIcon>
             </TouchableHighlight>
           </View>
@@ -70,7 +71,9 @@ const ChatV = ({ navigation }) => {
 const ChatBox = ({name}) => {
     return (
       <View style={styles.container1}>
-          <Text style={{color: 'black', fontSize: 15}}>{name}</Text>
+          <FontAwesomeIcon style={{marginRight: 20}} icon={faWater} size={50} color='#6C9DFF'></FontAwesomeIcon>
+        <Text style={{color: '#6C9DFF', fontSize: 17}}>{name}</Text>
+          
       </View>
     )
   }
@@ -81,10 +84,11 @@ const styles = StyleSheet.create({
         flex: 1,
         marginTop: 35,
         justifyContent: 'flex-start',
+        backgroundColor: '#fff8dc'
     },
     header: {
         height: '10%',
-        backgroundColor: 'black',
+        backgroundColor: '#deb887',
         flexDirection: 'row',
     },
     headerText: {
@@ -105,16 +109,22 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-evenly',
         alignItems: 'center',
+        backgroundColor: '#deb887',
+        paddingTop: 20,
+        paddingBottom: 10
     },
     chatlist: {
         height: '80%',
     },
     container1: {
-        borderWidth: 1,
+        borderWidth: 3,
         borderRadius: 10,
         margin: 10,
         padding: 10,
-        borderColor: 'red'
+        borderColor: '#6C9DFF',
+        backgroundColor: 'white',
+        flexDirection: 'row',
+        alignItems: 'center'
 
     }
 })

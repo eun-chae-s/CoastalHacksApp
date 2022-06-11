@@ -49,6 +49,8 @@ const NewsL = ({navigation}) => {
           <View style={styles.feed}>
             {/* Search bar */}
             <SearchBar
+                containerStyle={{backgroundColor: '#fff8dc', borderColor: '#fff8dc'}}
+                inputContainerStyle={{backgroundColor: '#FFEDA6', borderColor: '#FFEDA6'}}
                 placeholder='Search Beach'
                 value={beach}
                 onChangeText={beach => updateFeed(beach)}
@@ -68,6 +70,7 @@ const NewsL = ({navigation}) => {
                 underlayColor={'grey'}
             >
                 <FontAwesomeIcon
+                    color={'white'}
                     icon={ faPlusCircle }
                     size={50}
                 ></FontAwesomeIcon>
@@ -79,7 +82,7 @@ const NewsL = ({navigation}) => {
                 <FontAwesomeIcon
                     icon={ faPersonCircleExclamation }
                     size={50}
-                    color='red'
+                    color='#ff6347'
                 ></FontAwesomeIcon>
             </TouchableHighlight>
             <TouchableHighlight
@@ -87,6 +90,7 @@ const NewsL = ({navigation}) => {
                 underlayColor='white'
             >
                 <FontAwesomeIcon
+                    color={'white'}
                     icon={ faMessage }
                     size={50}
                 ></FontAwesomeIcon>
@@ -101,10 +105,12 @@ const styles = StyleSheet.create({
         flex: 1,
         marginTop: 35,
         justifyContent: 'flex-start',
+        backgroundColor: '#fff8dc'
     },
     header: {
         height: '10%',
-        backgroundColor: 'black',
+        backgroundColor: 'powderblue',
+        borderColor: 'powderblue',
         alignContent: 'space-between',
         flexDirection: 'row',
     },
@@ -123,9 +129,12 @@ const styles = StyleSheet.create({
         borderRadius: 30,
     },
     buttons: {
+        backgroundColor: 'powderblue',
         flexDirection: 'row',
         justifyContent: 'space-evenly',
         alignItems: 'center',
+        paddingTop: 20,
+        paddingBottom: 10,
     },
     feed: {
         height: '80%',

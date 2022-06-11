@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
     paddingTop: 50,
    },
   header: {
-    paddingtop: 10,
+    paddingTop: 10,
     paddingBottom: 5,
     fontSize: 40,
     fontWeight: 'bold',
@@ -38,7 +38,9 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-evenly',
     alignItems: 'center',
-    marginTop: 20,
+    paddingTop: 20,
+    paddingBottom: 10,
+    backgroundColor: '#deb887'
 },
 })
 
@@ -73,6 +75,7 @@ const SectionListBasics = ({navigation}) => {
                 <FontAwesomeIcon
                     icon={ faHome }
                     size={50}
+                    color={'white'}
                 ></FontAwesomeIcon>
             </TouchableHighlight>
             <TouchableHighlight
@@ -86,12 +89,13 @@ const SectionListBasics = ({navigation}) => {
                 ></FontAwesomeIcon>
             </TouchableHighlight>
             <TouchableHighlight
-                onPress={() => navigation.navigate('Chat')}
+                onPress={() => navigation.navigate('ChatV')}
                 underlayColor='white'
             >
                 <FontAwesomeIcon
                     icon={ faMessage }
                     size={50}
+                    color={'white'}
                 ></FontAwesomeIcon>
             </TouchableHighlight>
           </View>

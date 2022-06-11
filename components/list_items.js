@@ -1,8 +1,5 @@
-import { title } from 'process';
 import React, { Component } from 'react';
 import { Button, StyleSheet, View } from 'react-native';
-
-
 
 export default class ButtonBasics extends Component {
     _onPressButton() {
