@@ -18,13 +18,13 @@ export default class ButtonBasics extends Component {
             <View style={styles.LayoutButtonContainer}>
             <Button
                 onPress={this._onPressButton}
-                title="Insert Beach Name"
+                title={this.props.name}
                 color="white"
                 
             />
             <Button
                 onPress={this._onPress}
-                title="         12  ♡"
+                title={this.props.likes + "♡"}
                 color="#ff6347"
             />
             </View>
@@ -36,7 +36,7 @@ export default class ButtonBasics extends Component {
 const styles = StyleSheet.create({
   container: {
    flex: 1,
-   justifyContent: 'center',
+   justifyContent: 'center'
   },
   buttonContainer: {
     margin: 20

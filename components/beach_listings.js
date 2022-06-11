@@ -4,14 +4,15 @@ import ButtonBasics from './list_items';
 
 const styles = StyleSheet.create({
   container: {
-   flex: 1,
-   paddingTop: 50,
-  },
+    flex: 1,
+    paddingTop: 50,
+   },
   header: {
     paddingtop: 10,
     paddingBottom: 5,
     fontSize: 40,
     fontWeight: 'bold',
+    fontStyle: 'italic',
     alignItems: 'center',
   },
   sectionHeader: {
@@ -38,15 +39,14 @@ const SectionListBasics = () => {
         </View>
         <SectionList
           sections={[
-            {title: 'Hawaii', data: ['Maui', 'Kauai', 'Honolulu']},
-            {title: 'Florida', data: ['Destin', 'Sanibel Island', 'Clearwater Beach', 'Naples', 'Miami Beach']},
-            {title: 'California', data: ['Malibu', 'Half Moon Bay', 'Laguna Beach', 'Monterey State Beach']},
-            {title: 'North Carolina', data: ['Outer Banks']},
-            {title: 'Virginia', data: ['Assateague Island']},
-            {title: 'Oregon', data: ['Cannon Beach']},
+            {title: 'Hawaii', data: [{'beach': 'Maui', 'likes': 0}, {'beach': 'Kauai', 'likes': 0}, {'beach':'Honolulu', 'likes': 0}]},
+            {title: 'California', data: [{'beach': 'Malibu', 'likes': 0}, {'beach': 'Half Moon Bay', 'likes': 0}, {'beach': 'Laguna Beach', 'likes': 0}, {'beach': 'Monterey State Beach', 'likes': 0}]},
+            {title: 'North Carolina', data: [{'beach': 'Outer Banks', 'likes': 0}]},
+            {title: 'Virginia', data: [{'beach': 'Assateague Island', 'likes': 0}]},
+            {title: 'Oregon', data: [{'beach': 'Cannon Beach', 'likes': 0}]},
 
           ]}
-          renderItem={({item}) => <Text style={styles.item}>{item}</Text>}
+          renderItem={({item}) => <ButtonBasics name={item.beach} likes={item.likes}/>}
           renderSectionHeader={({section}) => <Text style={styles.sectionHeader}>{section.title}</Text>}
           keyExtractor={(item, index) => index}
 
