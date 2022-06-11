@@ -1,11 +1,11 @@
-import { faMessage, faPersonCircleExclamation, faPlusCircle, faUserCircle } from '@fortawesome/free-solid-svg-icons';
+import { faWater, faMessage, faPersonCircleExclamation } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import React, { useState } from 'react';
-import NewsItem from './NewsItem';
-import { FlatList, Alert, StyleSheet, View, Text, TouchableHighlight, Button } from 'react-native';
+import NewsItem from '../LifeGuard/NewsItem';
+import { FlatList, Alert, StyleSheet, View, Text, TouchableHighlight } from 'react-native';
 import { SearchBar } from 'react-native-elements';
 
-const NewsL = ({navigation}) => {
+const NewsV = ({navigation}) => {
     const [beach, setBeach] = useState('');
     const [flexibleData, setData] = useState(newsData);
 
@@ -31,18 +31,6 @@ const NewsL = ({navigation}) => {
           {/* Header */}
           <View style={styles.header}>
             <Text style={styles.headerText}>News</Text>
-            <TouchableHighlight
-                onPress={() => navigation.navigate('Profile')}
-                style={styles.profile}
-                underlayColor={'white'}
-            >
-                <FontAwesomeIcon
-                    icon={ faUserCircle }
-                    size={32}
-                    color='white'
-                >
-                </FontAwesomeIcon>
-            </TouchableHighlight>
           </View>
 
           {/* Feed */}
@@ -64,11 +52,11 @@ const NewsL = ({navigation}) => {
           {/* Buttons */}
           <View style={styles.buttons}>
             <TouchableHighlight
-                onPress={() => console.log('Upload!!')}
+                onPress={() => navigation.navigate('Beach')}
                 underlayColor={'grey'}
             >
                 <FontAwesomeIcon
-                    icon={ faPlusCircle }
+                    icon={ faWater }
                     size={50}
                 ></FontAwesomeIcon>
             </TouchableHighlight>
@@ -83,7 +71,7 @@ const NewsL = ({navigation}) => {
                 ></FontAwesomeIcon>
             </TouchableHighlight>
             <TouchableHighlight
-                onPress={() => navigation.navigate('ChatL')}
+                onPress={() => navigation.navigate('ChatV')}
                 underlayColor='white'
             >
                 <FontAwesomeIcon
@@ -132,4 +120,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default NewsL
+export default NewsV
