@@ -27,9 +27,14 @@ const Home = ({ navigation }) => {
                     <TouchableOpacity onPress={visitorPressed}>
                         <Text style={styles.visitor}>I am a visitor</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity onPress={staffPressed}>
-                        <Text style={styles.staff}>Staff Login</Text>
-                    </TouchableOpacity>
+                    <View style={styles.staffButtonContainer}>
+                        <TouchableOpacity onPress={staffPressed} style={styles.staffButtons}>
+                            <Text style={styles.staff}>Staff Login</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity onPress={staffPressed} style={styles.staffButtons}>
+                            <Text style={styles.staff}>Apply</Text>
+                        </TouchableOpacity>
+                    </View>
                 </View>
             </View>
         </ImageBackground>
@@ -49,31 +54,44 @@ const styles = StyleSheet.create(
         marginTop: '10%'
         },
     buttonContainer:{
-        marginTop: '55%'
+        marginTop: '55%',
+        width: '70%',
+        alignSelf: 'center'
     },
     visitor: {
         backgroundColor: 'white',
         color: '#3A59FF',
-        width: "75%",
+        width: "100%",
         borderRadius: 25,
         textAlign: 'center',
         fontWeight: 'bold',
-        marginLeft: '11%',
         padding: "2%",
         fontSize: 27,
         marginTop: '10%'
         },
+    staffButtonContainer: {
+        display: 'flex',
+        flexwrap: 'wrap',
+        marginTop: '5%',
+        width: '100%',
+        flexDirection: 'row',
+        justifyContent: 'space-evenly'
+    },
+    staffButtons:{
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
     staff: {
         backgroundColor: '#3A59FF',
         color: 'white',
-        width: "75%",
+        width: "100%",
         borderRadius: 25,
         textAlign: 'center',
-        fontWeight: 'bold',
-        marginLeft: '11%',
-        padding: "2%",
-        fontSize: 27,
-        marginTop: '10%'
+        padding: "3%",
+        fontSize: 24,
+        marginTop: '10%',
+        paddingHorizontal: '5%'
         }
     }
 );
