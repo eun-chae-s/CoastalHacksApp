@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {StyleSheet, Text, View, ImageBackground, Image, TouchableOpacity } from 'react-native';
+import {StyleSheet, Text, View, ImageBackground, Image, TouchableOpacity} from 'react-native';
 import { Alert } from 'react-native'
 
 const Home = ({ navigation }) => {
@@ -23,12 +23,14 @@ const Home = ({ navigation }) => {
                     resizeMode="contain"
                 >
                 </Image>
-                <TouchableOpacity onPress={visitorPressed}>
-                    <Text style={styles.visitor}>I am a visitor</Text>
-                </TouchableOpacity>
-                <TouchableOpacity onPress={staffPressed}>
-                    <Text style={styles.staff}>Staff Login</Text>
-                </TouchableOpacity>
+                <View style={styles.buttonContainer}>
+                    <TouchableOpacity onPress={visitorPressed}>
+                        <Text style={styles.visitor}>I am a visitor</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={staffPressed}>
+                        <Text style={styles.staff}>Staff Login</Text>
+                    </TouchableOpacity>
+                </View>
             </View>
         </ImageBackground>
     );
@@ -46,6 +48,9 @@ const styles = StyleSheet.create(
         marginLeft: '15%',
         marginTop: '10%'
         },
+    buttonContainer:{
+        marginTop: '55%'
+    },
     visitor: {
         backgroundColor: 'white',
         color: '#3A59FF',
@@ -56,7 +61,7 @@ const styles = StyleSheet.create(
         marginLeft: '11%',
         padding: "2%",
         fontSize: 27,
-        marginTop: '70%'
+        marginTop: '10%'
         },
     staff: {
         backgroundColor: '#3A59FF',
