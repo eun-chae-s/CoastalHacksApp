@@ -37,7 +37,7 @@ const Register = ({ navigation }) => {
         setErrortext('');
         if (!userName) {
             alert('Incomplete fields');
-            setErrortext('Name is Required');
+            setErrortext('*Name is Required*');
             return;
         }
         if (!userPassword) {
@@ -109,7 +109,7 @@ const Register = ({ navigation }) => {
                             height: 100,
                             resizeMode: 'contain',
                             marginBottom: 0,
-                            marginTop:20
+                            marginTop:50
                         }}
                     />
                 </View>
@@ -209,6 +209,7 @@ const styles = StyleSheet.create({
         marginLeft: 35,
         marginRight: 35,
         margin: 10,
+        justifyContent: 'center'
     },
     buttonStyle: {
         backgroundColor: 'powderblue',
@@ -258,6 +259,7 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderRadius: 30,
         borderColor: '#fff8dc',
+        backgroundColor: 'white'
     },
     errorTextStyle: {
         color: 'red',

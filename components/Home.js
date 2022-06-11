@@ -5,7 +5,7 @@ import { Alert } from 'react-native'
 const Home = ({ navigation }) => {
 
     const visitorPressed = () => {
-        navigation.navigate('NewsL')
+        navigation.navigate('NewsV')
     }
 
     const staffPressed = () => {
@@ -36,7 +36,7 @@ const Home = ({ navigation }) => {
                             <Text style={styles.staff}>Staff Login</Text>
                         </TouchableOpacity>
                         <TouchableOpacity onPress={applyPressed} style={styles.staffButtons}>
-                            <Text style={styles.staff}>Apply</Text>
+                            <Text style={styles.staff}>New Staff</Text>
                         </TouchableOpacity>
                     </View>
                 </View>
@@ -60,7 +60,7 @@ const styles = StyleSheet.create(
     buttonContainer:{
         marginTop: '55%',
         width: '70%',
-        alignSelf: 'center'
+        alignSelf: 'center',
     },
     visitor: {
         backgroundColor: 'white',
@@ -85,14 +85,17 @@ const styles = StyleSheet.create(
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
+        margin: 10,
+        borderRadius: 25,
     },
     staff: {
         backgroundColor: '#3A59FF',
         color: 'white',
         width: "100%",
-        borderRadius: 25,
+        height: 80,
         textAlign: 'center',
-        padding: "3%",
+        padding: 10,
+        fontWeight: 'bold',
         fontSize: 24,
         marginTop: '10%',
         paddingHorizontal: '5%'
