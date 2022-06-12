@@ -4,18 +4,18 @@ import React, { useState } from 'react';
 import NewsItem from '../LifeGuard/NewsItem';
 import { FlatList, Alert, StyleSheet, View, Text, TouchableHighlight } from 'react-native';
 import { SearchBar } from 'react-native-elements';
-//import newsData from '../Data/newsdata';
+import newsData from '../../Data/newsdata';
 
 const NewsV = ({navigation}) => {
     const [beach, setBeach] = useState('');
-    //const [flexibleData, setData] = useState(newsData);
+    const [flexibleData, setData] = useState(newsData);
 
     const updateFeed = (b) => {
         setBeach(b);
         if (b === '') {
-            //setData(newsData);
+            setData(newsData);
         } else {
-            //setData(newsData.filter(item => item.beachname.includes(b)));
+            setData(newsData.filter(item => item.beachname.includes(b)));
         }
     }
 
@@ -38,7 +38,7 @@ const NewsV = ({navigation}) => {
             />
             {/* News */}
             <FlatList
-                //data={(beach === '') ? newsData : flexibleData}
+                data={(beach === '') ? newsData : flexibleData}
                 renderItem={({item}) => <NewsItem name={item.beachname} news={item.news} time={item.time}></NewsItem>}
             >
             </FlatList>
