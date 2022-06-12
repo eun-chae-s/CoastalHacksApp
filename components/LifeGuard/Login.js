@@ -1,7 +1,7 @@
 import { useNavigation } from '@react-navigation/native';
 import React, { useState, createRef }  from 'react'
 import { View, Text, TextInput, StyleSheet, Button } from 'react-native';
-import dummy_data from '../Data/dummydata';
+import dummy_data from '../../Data/dummydata';
 
 const Login = ({navigation}) => {
 
@@ -19,7 +19,7 @@ const Login = ({navigation}) => {
         console.log(temp)
         console.log(dummy_data)
         if (containsUser(temp)){
-            navigation.navigate('NewsL')
+            navigation.navigate('NewsL', {})
         } else {
             alert('Invalid username or password')
         }

@@ -4,12 +4,12 @@ import React, { useState } from 'react';
 import NewsItem from './NewsItem';
 import { FlatList, Alert, StyleSheet, View, Text, TouchableHighlight, Button } from 'react-native';
 import { SearchBar } from 'react-native-elements';
-import newsData from '../Data/newsdata';
+//import newsData from '../Data/newsdata';
 
 const NewsL = ({route, navigation}) => {
     const [beach, setBeach] = useState('');
     const newData = route.params.newdata;
-    const [flexibleData, setData] = useState(newData + newsData);
+    //const [flexibleData, setData] = useState(newData + newsData);
 
     const updateFeed = (b) => {
         console.log(newData);
@@ -52,7 +52,7 @@ const NewsL = ({route, navigation}) => {
             />
             {/* News */}
             <FlatList
-                data={(beach === '') ? newsData: flexibleData}
+                // data={(beach === '') ? newsData: flexibleData}
                 renderItem={({item}) => <NewsItem name={item.beachname} news={item.news} time={item.time}></NewsItem>}
             >
             </FlatList>
