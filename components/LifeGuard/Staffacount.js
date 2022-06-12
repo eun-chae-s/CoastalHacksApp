@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, Image, Button, TouchableOpacity } from 'react-n
 
 
 
-const staffaccount = ({navigation}) => {
+const Staffaccount = ({navigation}) => {
   return(
       <View style = { styles.container } >
           <View style={styles.header}>
@@ -78,7 +78,7 @@ const staffaccount = ({navigation}) => {
     );
   }
 
-export default staffaccount
+export default Staffaccount
 
 
 

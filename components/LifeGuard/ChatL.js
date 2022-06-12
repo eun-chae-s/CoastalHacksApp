@@ -37,7 +37,7 @@ const ChatL = ({ navigation }) => {
             <View style={styles.buttons}>
             <TouchableHighlight
                 underlayColor={'grey'}
-                onPress={() => console.log('Hello!')}
+                onPress={() => navigation.navigate('Upload')}
             >
                 <FontAwesomeIcon
                     icon={ faPlusCircle }
@@ -57,7 +57,7 @@ const ChatL = ({ navigation }) => {
             </TouchableHighlight>
             <TouchableHighlight
                 underlayColor={'white'}
-                onPress={() => navigation.navigate('NewsL', {})}
+                onPress={() => navigation.navigate('NewsL')}
             >
                 <FontAwesomeIcon
                     icon={ faHome }
