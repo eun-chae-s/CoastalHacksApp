@@ -10,6 +10,9 @@ import Upload from './components/LifeGuard/Upload';
 import Recommendation from './components/Visitor/Recommendation';
 import calendar from './components/Visitor/calendar'
 import SectionListBasics from './components/Visitor/beach_listings';
+import staffaccount from './components/LifeGuard/Staffacount'; 
+import ChatL from './components/LifeGuard/ChatL';
+import FlatListBasics from './components/Chat'
 
 const Stack = createNativeStackNavigator();
 
@@ -26,6 +29,9 @@ const MyNavigator = () => {
             <Stack.Screen name="Recommendation" component={Recommendation}/>
             <Stack.Screen name="calendar" component={calendar}/>
             <Stack.Screen name="Beach" component={SectionListBasics}/>
+            <Stack.Screen name="Profile" component={staffaccount}/>
+            <Stack.Screen name="ChatL" component={ChatL}/>
+            <Stack.Screen name="Chat" component={FlatListBasics}/>
         </Stack.Navigator>
       );
 }

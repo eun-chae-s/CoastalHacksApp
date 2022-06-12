@@ -23,7 +23,7 @@ const ChatL = ({ navigation }) => {
                     data={chatting}
                     renderItem={({item}) => 
                     <TouchableHighlight
-                        onPress={() => Alert.alert('hey!')}
+                        onPress={() => navigation.navigate('Chat')}
                     >
                         { (item.type === 'V') ? <ChatBoxV name={item.name}></ChatBoxV> : <ChatBoxL name={item.name}></ChatBoxL>}
                     </TouchableHighlight>
@@ -57,7 +57,7 @@ const ChatL = ({ navigation }) => {
             </TouchableHighlight>
             <TouchableHighlight
                 underlayColor={'white'}
-                onPress={() => navigation.navigate('NewsL')}
+                onPress={() => navigation.navigate('NewsL', {})}
             >
                 <FontAwesomeIcon
                     icon={ faHome }
