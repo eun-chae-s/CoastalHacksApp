@@ -1,5 +1,5 @@
 import React from 'react';
-import { SectionList, StyleSheet, Text, View, TouchableHighlight} from 'react-native';
+import { Alert, SectionList, StyleSheet, Text, View, TouchableHighlight} from 'react-native';
 import ButtonBasics from './list_items';
 import { faMessage, faPersonCircleExclamation, faHome } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';

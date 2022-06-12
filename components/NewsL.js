@@ -4,25 +4,20 @@ import React, { useState } from 'react';
 import NewsItem from './NewsItem';
 import { FlatList, Alert, StyleSheet, View, Text, TouchableHighlight, Button } from 'react-native';
 import { SearchBar } from 'react-native-elements';
+import newsData from '../Data/newsdata';
 
-const NewsL = ({navigation}) => {
+const NewsL = ({route, navigation}) => {
     const [beach, setBeach] = useState('');
-    const [flexibleData, setData] = useState(newsData);
-
-    const newsData = [
-        {'beachname': 'Maui', 'news': 'jellyfish-found!', 'time': '30 min ago'},
-        {'beachname': 'Kauai', 'news': 'jellyfish-found!', 'time': '1 hour ago'},
-        {'beachname': 'Destin', 'news': 'jellyfish-found!', 'time': '2 hours ago'},
-        {'beachname': 'Sanibel Island', 'news': 'jellyfish-found!', 'time': '3 hours ago'},
-        {'beachname': 'Honolulu', 'news': 'jellyfish-found!', 'time': '3 hours ago'},
-    ]
+    const newData = route.params.newdata;
+    const [flexibleData, setData] = useState(newData + newsData);
 
     const updateFeed = (b) => {
+        console.log(newData);
         setBeach(b);
         if (b === '') {
-            setData(newsData);
+            setData(flexibleData);
         } else {
-            setData(newsData.filter(item => item.beachname.includes(b)));
+            setData(flexibleData.filter(item => item.beachname.includes(b)));
         }
     }
 
@@ -57,7 +52,7 @@ const NewsL = ({navigation}) => {
             />
             {/* News */}
             <FlatList
-                data={(beach === '') ? newsData : flexibleData}
+                data={(beach === '') ? newsData: flexibleData}
                 renderItem={({item}) => <NewsItem name={item.beachname} news={item.news} time={item.time}></NewsItem>}
             >
             </FlatList>
@@ -66,7 +61,7 @@ const NewsL = ({navigation}) => {
           {/* Buttons */}
           <View style={styles.buttons}>
             <TouchableHighlight
-                onPress={() => console.log('Upload!!')}
+                onPress={() => navigation.navigate('Upload')}
                 underlayColor={'grey'}
             >
                 <FontAwesomeIcon
