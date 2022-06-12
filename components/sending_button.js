@@ -23,8 +23,8 @@ export default class SendButton extends Component {
 const styles = StyleSheet.create({
   container: {
    flex: 1,
-   paddingTop: 170,
-   paddingLeft: 320
+  //  paddingTop: 170,
+  //  paddingLeft: 320
   },
   buttonContainer: {
     margin: 3,

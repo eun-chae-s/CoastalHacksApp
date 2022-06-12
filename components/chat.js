@@ -1,7 +1,6 @@
 import React from 'react';
 import { Button, FlatList, SectionList, StyleSheet, Text, View } from 'react-native';
 import MyKeyboard from './keyboard';
-import SendButton from './sending_button';
 
 const styles = StyleSheet.create({
     container: {
@@ -44,7 +43,6 @@ const FlatListBasics = () => {
             ]}
             renderItem={({item}) => <Text style={styles.item}>{item.key}</Text>}
         />
-      <SendButton />
       <MyKeyboard />     
       </View>
   );

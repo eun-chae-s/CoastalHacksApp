@@ -22,11 +22,14 @@ const MyKeyboard = () => {
 
   return (
     <View style={style.container}>
+      <View style={style.keyboardContainer}>
         <TextInput
           style={style.input}
           placeholder='Click here...'
           onSubmitEditing={Keyboard.dismiss}
         />
+        <SendButton />
+        </View>
       <Text style={style.status}>{keyboardStatus}</Text>
     </View>
   );
@@ -35,21 +38,22 @@ const MyKeyboard = () => {
 const style = StyleSheet.create({
   container: {
     flex: 1,
-    paddingBottom: 300,
+    paddingBottom: 100,
     paddingLeft: 5,
     paddingRight:5,
     paddingTop: 5,
-   backgroundColor: '#deb887'
+    backgroundColor: '#fffff0',
   },
   input: {
     padding: 10,
-    minWidth: 250,
+    minWidth: 310,
     borderWidth: 0.5,
     borderRadius: 4,
   },
   keyboardContainer: {
-      peddlingTop: 0
-      // flex: 1,
+    display: 'flex',
+    flexDirection: 'row',
+    paddingTop: 5
   }
 });
 
