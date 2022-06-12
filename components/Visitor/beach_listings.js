@@ -53,7 +53,7 @@ const SectionListBasics = ({navigation}) => {
         <View style={styles.list}>
           <SectionList
             sections={[
-              {title: 'Hawaii', data: [{'beach': 'Maui', 'likes': 0}, {'beach': 'Kauai', 'likes': 0}, {'beach':'Honolulu', 'likes': 0}]},
+              {title: 'Hawaii', data: [{'beach': 'Maui', 'likes': 0}, {'beach': 'Kauai', 'likes': 4}, {'beach':'Honolulu', 'likes': 0}]},
               {title: 'California', data: [{'beach': 'Malibu', 'likes': 0}, {'beach': 'Half Moon Bay', 'likes': 0}, {'beach': 'Laguna Beach', 'likes': 0}, {'beach': 'Monterey State Beach', 'likes': 0}]},
               {title: 'North Carolina', data: [{'beach': 'Outer Banks', 'likes': 0}]},
               {title: 'Virginia', data: [{'beach': 'Assateague Island', 'likes': 0}]},

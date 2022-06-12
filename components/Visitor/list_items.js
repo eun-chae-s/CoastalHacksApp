@@ -27,12 +27,12 @@ export default class ButtonBasics extends Component {
                 <Button
                     onPress={this._onPressButton}
                     title={this.props.name}
-                    color="white"
+                    color="powderblue"
                     
                 />
                 <View style={{flexDirection: 'row'}}>
                     <View style={{alignSelf: 'center'}}>
-                        <Text style={{color: "#ff6347", marginRight: 20}}>{this.state.likes}</Text>
+                        <Text style={{color: "#ff6347", backgroundColor:'powderblue', marginRight: 20}}>{this.state.likes}</Text>
                     </View>
                     <TouchableHighlight
                         style={styles.heart}

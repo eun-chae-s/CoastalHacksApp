@@ -27,19 +27,20 @@ const styles = StyleSheet.create({
     },
 });
 
-const FlatListBasics = () => {
+const FlatListBasics = ({navigation}) => {
   return (
     <View style={styles.container}>
         <View style={styles.header}>
             <Button 
                 title="                                                                         X"
                 color='white'>
+                onPress={()=>navigation.navigate('NewsL')}
             </Button>           
             <Text style={styles.header}> □ Visitor1 </Text>
         </View>
         <FlatList
             data={[
-            {key: 'Plz help me! I am drowning rn :('},
+            {key: 'Plz help me! I am drowning rn ( ͡° ͜ʖ ͡°)'},
             ]}
             renderItem={({item}) => <Text style={styles.item}>{item.key}</Text>}
         />

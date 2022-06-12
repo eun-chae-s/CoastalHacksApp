@@ -1,14 +1,11 @@
-import React, { Component } from 'react';
-import {StyleSheet, Text, View, Image, Button, TouchableOpacity} from 'react-native';
+import React from 'react';
+import { StyleSheet, Text, View, Image, Button, TouchableOpacity } from 'react-native';
 
 
 
-export default class staffacount extends Component {
-
-
-  render() {
-    return (
-      <View style={styles.container}>
+const staffaccount = ({navigation}) => {
+  return(
+      <View style = { styles.container } >
           <View style={styles.header}>
             <View style={styles.headerContent}>
                 <Image style={styles.profile}
@@ -80,17 +77,17 @@ export default class staffacount extends Component {
       </View>
     );
   }
-}
 
-export default staffacount;
+export default staffaccount
+
 
 
 const styles = StyleSheet.create({
-  header:{
+  header: {
     backgroundColor: '#fff8dc'
   },
-  headerContent:{
-    padding:30,
+  headerContent: {
+    padding: 30,
     alignItems: 'center',
   },
   profile: {
@@ -99,46 +96,46 @@ const styles = StyleSheet.create({
     borderRadius: 63,
     borderWidth: 4,
     borderColor: "white",
-    marginBottom:10,
+    marginBottom: 10,
   },
-  name:{
-    fontSize:22,
-    fontWeight:'bold',
-    color:"#000000",
-    fontWeight:'600',
+  name: {
+    fontSize: 22,
+    fontWeight: 'bold',
+    color: "#000000",
+    fontWeight: '600',
   },
-  userInfo:{
-    fontSize:16,
-    color:"#778899",
-    fontWeight:'600',
+  userInfo: {
+    fontSize: 16,
+    color: "#778899",
+    fontWeight: '600',
   },
-  body:{
+  body: {
     backgroundColor: "powderblue",
-    height:500,
-    alignItems:'center',
+    height: 500,
+    alignItems: 'center',
     marginBottom: 2
   },
-  item:{
-    flexDirection : 'row',
+  item: {
+    flexDirection: 'row',
   },
-  infoContent:{
-    flex:1,
-    alignItems:'flex-start',
-    paddingRight:150
+  infoContent: {
+    flex: 1,
+    alignItems: 'flex-start',
+    paddingRight: 150
   },
-  iconContent:{
-    flex:1,
-    alignItems:'flex-end',
-    paddingRight:25
+  iconContent: {
+    flex: 1,
+    alignItems: 'flex-end',
+    paddingRight: 25
   },
-  icon:{
-    width:60,
-    height:60,
-    marginTop:20,
+  icon: {
+    width: 60,
+    height: 60,
+    marginTop: 20,
   },
-  info:{
-    fontSize:18,
-    marginTop:20,
+  info: {
+    fontSize: 18,
+    marginTop: 20,
     color: "#FFFFFF",
     marginBottom: 50,
   },
