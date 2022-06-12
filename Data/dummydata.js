@@ -6,7 +6,7 @@ const user1 = {
 }
 
 const user2 = {
-    'email': 'Dummyuser@mail.com',
+    'email': 'Dummy',
     'password': '123'
 }
 

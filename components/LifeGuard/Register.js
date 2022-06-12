@@ -2,7 +2,7 @@
 // https://aboutreact.com/react-native-login-and-signup/
 
 import { NavigationHelpersContext } from '@react-navigation/native';
-import dummy_data from '../dummydata';
+import dummy_data from '../../Data/dummydata';
 import React, { useState, createRef } from 'react';
 import {
     StyleSheet,
@@ -78,7 +78,7 @@ const Register = ({ navigation }) => {
                 }}>
                 <View style={{ alignItems: 'center' }}>
                     <Image
-                        source={require('../assets/logo.png')}
+                        source={require('../../assets/logo.png')}
                         style={{
                             width: '50%',
                             height: 100,
