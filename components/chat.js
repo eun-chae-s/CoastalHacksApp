@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, FlatList, SectionList, StyleSheet, Text, View } from 'react-native';
+import { Button, FlatList, StyleSheet, Text, View } from 'react-native';
 import MyKeyboard from './keyboard';
 
 const styles = StyleSheet.create({
@@ -35,7 +35,7 @@ const FlatListBasics = () => {
                 title="                                                                         X"
                 color='white'>
             </Button>           
-            <Text style={styles.header}> □ Ashley </Text>
+            <Text style={styles.header}> □ Visitor1 </Text>
         </View>
         <FlatList
             data={[
