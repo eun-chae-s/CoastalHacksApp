@@ -2,15 +2,15 @@ import React, { Component } from 'react';
 import { Button, StyleSheet, View } from 'react-native';
 
 export default class SendButton extends Component {
-//   _onPressButton() {
-//   }
+  _onPressButton() {
+  }
 
   render() {
     return (
       <View style={styles.container}>
         <View style={styles.buttonContainer}>
           <Button
-            // onPress={this._onPressButton}
+            onPress={this._onPressButton}
             title="Send"
             color='white'
           />
@@ -23,8 +23,8 @@ export default class SendButton extends Component {
 const styles = StyleSheet.create({
   container: {
    flex: 1,
-   paddingTop: 180,
-   paddingLeft: 310,
+   paddingTop: 170,
+   paddingLeft: 320
   },
   buttonContainer: {
     margin: 3,

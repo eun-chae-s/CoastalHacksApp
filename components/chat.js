@@ -1,24 +1,23 @@
 import React from 'react';
-import { FlatList, StyleSheet, Text, View } from 'react-native';
-import SendButton from './sending_button';
+import { Button, FlatList, SectionList, StyleSheet, Text, View } from 'react-native';
 import MyKeyboard from './keyboard';
+import SendButton from './sending_button';
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        paddingTop: 50,
+        paddingTop: 40,
        },
     header: {
-        paddingtop: 30,
-        paddingBottom: 30,
-        paddingRight: 80,
+        paddingBottom: 10,
         fontSize: 40,
         fontWeight: 'bold',
         fontStyle: 'italic',
+        backgroundColor: "#ff6347"
       },
     item: {
         padding: 10,
-        paddingRight: 30,
+        paddingRight: 100,
         paddingBottom: 40,
         fontSize: 18,
         height: 44,
@@ -33,17 +32,21 @@ const FlatListBasics = () => {
   return (
     <View style={styles.container}>
         <View style={styles.header}>
-            <Text style={styles.header}> ○ Ashley </Text>
-      <FlatList
-        data={[
-          {key: 'Plz help me! I am drowning rn :('},
-        ]}
-        renderItem={({item}) => <Text style={styles.item}>{item.key}</Text>}
-      />
-      <SendButton/> 
+            <Button 
+                title="                                                                         X"
+                color='white'>
+            </Button>           
+            <Text style={styles.header}> □ Ashley </Text>
+        </View>
+        <FlatList
+            data={[
+            {key: 'Plz help me! I am drowning rn :('},
+            ]}
+            renderItem={({item}) => <Text style={styles.item}>{item.key}</Text>}
+        />
+      <SendButton />
       <MyKeyboard />     
       </View>
-    </View>
   );
 }
 
