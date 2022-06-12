@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import NewsItem from './NewsItem';
 import { FlatList, Alert, StyleSheet, View, Text, TouchableHighlight, Button } from 'react-native';
 import { SearchBar } from 'react-native-elements';
-import newsData from '../Data/newsdata';
+import newsData from '../../Data/newsdata';
 
 const NewsL = ({route, navigation}) => {
     const [beach, setBeach] = useState('');
