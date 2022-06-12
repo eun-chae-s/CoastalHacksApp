@@ -21,7 +21,7 @@ const ChatV = ({ navigation }) => {
                     data={chatting}
                     renderItem={({item}) => 
                     <TouchableHighlight
-                        onPress={() => Alert.alert('hey!')}
+                        onPress={() => navigation.navigate('Chat')}
                     >
                         <ChatBox name={item.name}></ChatBox>
                     </TouchableHighlight>

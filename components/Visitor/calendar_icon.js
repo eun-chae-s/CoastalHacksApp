@@ -30,6 +30,8 @@ const styles = StyleSheet.create({
   buttonContainer: {
     margin: 5,
     backgroundColor: '#ff6347',
-    borderRadius: 20
+    borderRadius: 20,
+    width: 300,
+    alignSelf: 'center',
   },
 });

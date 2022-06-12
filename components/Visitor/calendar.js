@@ -3,7 +3,7 @@ import {Calendar} from 'react-native-calendars';
 import ButtonBasics from './calendar_icon';
 // npm install --save react-native-calendars
 
-const CurrCalendar = () => {
+const CurrCalendar = ({navigation}) => {
     return (
         <View style={styles.container}>
             <View style={styles.header}>
@@ -22,9 +22,8 @@ const CurrCalendar = () => {
 const styles = StyleSheet.create({
     container:{
         flex: 1,
-        paddingTop: 150,
-        paddingBottom: 100,
-        paddingLeft: 25
+        marginTop: 70,
+        justifyContent: 'center',
     },
     header: {
         paddingTop: 5,
@@ -38,4 +37,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default CurrCalendar
+export default CurrCalendar;

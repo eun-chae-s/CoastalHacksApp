@@ -60,7 +60,7 @@ const SectionListBasics = ({navigation}) => {
               {title: 'Oregon', data: [{'beach': 'Cannon Beach', 'likes': 0}]},
 
             ]}
-            renderItem={({item}) => <ButtonBasics name={item.beach} likes={item.likes}/>}
+            renderItem={({item}) => <ButtonBasics name={item.beach} likes={item.likes} navigation={navigation}/>}
             renderSectionHeader={({section}) => <Text style={styles.sectionHeader}>{section.title}</Text>}
             keyExtractor={(item, index) => index}
 
