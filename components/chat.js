@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
         padding: 10,
         paddingRight: 100,
         paddingBottom: 40,
-        fontSize: 18,
+        fontSize: 15,
         height: 44,
         borderColor: 'white',
         borderWidth: 3,
@@ -33,10 +33,10 @@ const FlatListBasics = ({navigation}) => {
         <View style={styles.header}>
             <Button 
                 title="                                                                         X"
-                color='white'>
-                onPress={()=>navigation.navigate('NewsL')}
+                color='white'
+                onPress={()=>navigation.navigate('NewsL')}>
             </Button>           
-            <Text style={styles.header}> □ Visitor1 </Text>
+            <Text style={styles.header}> □ Visitor 1 </Text>
         </View>
         <FlatList
             data={[
